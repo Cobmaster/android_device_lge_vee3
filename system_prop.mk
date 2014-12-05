@@ -63,3 +63,5 @@ PRODUCT_PROPERTY_OVERRIDES += persist.radio.apm_sim_not_pwdn="true"
 # Debug
 PRODUCT_PROPERTY_OVERRIDES += debug.gralloc.map_fb_memory="true"
 PRODUCT_PROPERTY_OVERRIDES += debug.hwc.fakevsync="true"
+# Newer camera API isn't supported.
+PRODUCT_PROPERTY_OVERRIDES += camera2.portability.force_api=1
