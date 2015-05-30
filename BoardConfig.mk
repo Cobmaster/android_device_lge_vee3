@@ -123,15 +123,7 @@ TARGET_PROVIDES_LIBLIGHT := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
 # SEPolicy
-BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
-
-BOARD_SEPOLICY_UNION += app.te
-BOARD_SEPOLICY_UNION += device.te
-BOARD_SEPOLICY_UNION += file_contexts
-BOARD_SEPOLICY_UNION += rild.te
-BOARD_SEPOLICY_UNION += untrusted_app.te
-BOARD_SEPOLICY_UNION += vold.te
-BOARD_SEPOLICY_UNION += zygote.te
+include device/qcom/sepolicy/sepolicy.mk
 
 # Bootanimation
 TARGET_BOOTANIMATION_PRELOAD := true
